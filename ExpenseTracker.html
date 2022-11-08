@@ -80,6 +80,10 @@ let serilized_Obj = JSON.stringify(myobj);
 axios.post("http://localhost:3000/addexpense",myobj)
 .then((Response)=>{
 console.log(Response)
+document.getElementById('amount').value="";
+  document.getElementById('descip').value="";
+  document.getElementById('category').value="";
+
 })
 .catch((err)=>{
     console.log(err)
