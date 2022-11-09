@@ -98,7 +98,6 @@ function ShowExpenses(user){
  let parentNode = document.getElementById('belowexpenses');
  let childHTML = `<li id=${user.id}> ${user.amount}-${user.descip}-${user.category}
   <button onclick=deleteUser('${user.id}')> Delete </button>
-  <button onclick=editUserDetails('${user.amount}','${user.descip},','${user.category}','${user.id}')>Edit users</button>
 </li>`
 ;
 
@@ -123,17 +122,6 @@ removeExpenseFromScreen(userId)
     console.log(childNodeTobeDeleted);
    parentNode.removeChild(childNodeTobeDeleted);
   }
-
-
-  
-function editUserDetails(amount,description,category,userId){
-  //console.log(document.getElementById('amount').value);
-  document.getElementById('amount').value=amount;
-  document.getElementById('descip').value=description;
-  document.getElementById('category').value=category;
-  
-deleteUser(userId);
-}
 
   </script>
 </body>
